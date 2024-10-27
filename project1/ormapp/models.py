@@ -5,5 +5,6 @@ class Loan(models.Model):
 	AccountNumber=models.IntegerField(primary_key=True)
 	IFSCcode=models.CharField(max_length=11)
 	LoanAmount=models.DecimalField(max_digits=10,decimal_places=2)
+	Email=models.EmailField(default = 'example@gmail.com')
 class LoanAdmin(admin.ModelAdmin):
-		list_display=('Name','AccountNumber','IFSCcode','LoanAmount')
+		list_display=('Name','AccountNumber','IFSCcode','LoanAmount','Email')
